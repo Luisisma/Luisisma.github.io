@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registro</title>
+		<meta charset="UTF-8"/>
+	    <link href="css/estilo.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<header>
+			<div id="logoindex">
+				<img src="img/logo.jpg" alt="logo">
+				<img src="img/logoutp.jpg" alt="logo">
+			</div>
+		</header>
+		
+		<section id="formulario">
+			<form name="Nuevo Usuario" method="POST" action="php/ConexionCrearUsuario.php">
+			Nickname:<br>
+			<input type="text" name="nickname" maxlength="20" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su Nickname" required><br>
+			Contraseña:<br>
+			<input type="password" name="contraseña" minlength="8" maxlength="20" autocomplete="new-password" placeholder="Ingrese su Contraseña" required><br>
+			<br>
+            <div id="contrasena_requisitos">
+                <strong>Requisitos de Contraseña:</strong>
+                <ul>
+                    <li>Al menos 8 caracteres</li>
+                    <li>Debe contener al menos una letra mayúscula</li>
+                    <li>Debe contener al menos una letra minúscula</li>
+                    <li>Debe contener al menos un número</li>
+                </ul>
+            </div>
+			<!-- pattern="[a-zA-Z0-9]+" agregar a Contraseña-->
+			Nombre:<br>
+			<input type="text" name="nombre" maxlength="20"  pattern="[a-zA-Z0-9]+" placeholder="Ingrese su nombre" required><br>
+			Apellidos:<br>
+			<input type="text" name="apellidos" maxlength="20" pattern="[a-zA-Z0-9áéíóúüÜÑñ\s]+" placeholder="Ingrese Apellidos" required><br>
+			Email:<br>
+			<input type="email" name="correo" maxlength="100" placeholder="Ingrese su email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required><br>
+			<!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" probar en email -->
+			Edad:<br>
+			<input type="number" name="edad" min="18" placeholder="Ingrese su edad" required><br>
+			Descripción:<br>
+			<textarea name="descripcion" maxlength="255" placeholder="Ingrese su descripción" required></textarea><br>
+			
+			<input type="submit" name="enviar" class="boton" value="Registrate">
+			<input type="reset" class="boton" value="Borrar">
+			<hr>
+			</form>
+		</section>
+
+		<section id="formulario2">
+			<h2>Iniciar Sesion</h2>
+			<form name="contacto" method="POST" action="php/IniciarSesion.php">
+				Nickname:<br>
+				<input type="text" name="nickname" maxlength="20" pattern="[a-zA-Z0-9]+" placeholder="Ingrese su Nickname" required><br>
+				Contraseña:<br>
+				<input type="password" name="contraseña" maxlength="20" autocomplete="off" placeholder="Ingrese su Contraseña" required><br>
+				<hr> <!-- Linea -->
+				<input type="submit" name="enviar" class="boton" value="IniciarSesion">
+			</form>
+		</section>
+	
+	<footer>
+		<p>Copyright &copy; 2024, Luis Morales</p>
+	</footer>
+	
+	</body>
+
+</html>
+
+           
